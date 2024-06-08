@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmonaut Clash</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('background.png') no-repeat center center;
+            background-size: cover;
+        }
+        canvas {
+            background-color: black;
+            border: 20px solid transparent;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+        #deathScreen {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+        #restartButton {
+            background: #00f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #scoreDisplay {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div id="deathScreen">
+        <h1>Game Over</h1>
+        <p id="scoreDisplay">Score: 0</p>
+        <button id="restartButton">Restart</button>
+    </div>
+    <audio id="backgroundMusic" src="ussrspace_final.mp3" loop></audio>
+    <script src="game.js"></script>
+</body>
+</html>
